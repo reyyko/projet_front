@@ -1,0 +1,194 @@
+/* Fond général */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5dc; /* Fond beige */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Titre principal */
+h1 {
+    text-align: center;
+    color: #000000; /* Rouge sombre pour les titres */
+    margin: 20px 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #c45c5c; /* Rouge délavé (comme des tuiles) */
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: center; /* Centre les liens */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Espacement entre les liens */
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white; /* Couleur des liens */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: #a73f3f; /* Rouge un peu plus sombre au survol */
+    transform: scale(1.05); /* Effet de zoom léger */
+}
+
+/* Table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff; /* Blanc pour contraste */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd; /* Bordures gris clair */
+    padding: 12px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+th {
+    background-color: #c45c5c; /* Rouge délavé */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: #fefefe; /* Fond clair pour les cellules */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternance des couleurs pour les lignes */
+}
+
+tr:hover {
+    background-color: #ffe5e5; /* Rouge très clair au survol */
+    cursor: pointer;
+}
+
+/* Boutons */
+/* Bouton global "Ajouter" */
+form[action="ajouter.php"] button {
+    background-color: #6fbf73; /* Vert délavé */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    margin: 20px auto; /* Centre le bouton */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form[action="ajouter.php"] button:hover {
+    background-color: #5da564; /* Vert légèrement plus foncé */
+    transform: scale(1.05); /* Effet de zoom */
+}
+
+/* Bouton "Supprimer" */
+form[action="supprimer.php"] button {
+    background-color: #c45c5c; /* Rouge délavé */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form[action="supprimer.php"] button:hover {
+    background-color: #a73f3f; /* Rouge légèrement plus foncé */
+    transform: scale(1.05); /* Effet de zoom */
+}
+
+/* Bouton "Modifier" */
+form[action="modifier.php"] button {
+    background-color: #d67373; /* Rouge encore moins délavé */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form[action="modifier.php"] button:hover {
+    background-color: #bf5050; /* Rouge légèrement plus foncé */
+    transform: scale(1.05); /* Effet de zoom */
+}
+
+/* Bouton "Enregistrer" */
+form[action="ajouter_commentaire.php"] button {
+    background-color: #71c793;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form[action="ajouter_commentaire.php"] button:hover {
+    background-color: #71c793; /* Rouge légèrement plus foncé */
+    transform: scale(1.05); /* Effet de zoom */
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}

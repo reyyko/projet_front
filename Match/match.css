@@ -1,0 +1,198 @@
+/* Général */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5dc; /* Fond beige */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #000; /* Titre en noir */
+    margin: 20px 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #c45c5c; /* Rouge délavé */
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    margin-bottom: 20px; /* Espacement avec le formulaire */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: center; /* Centre les liens */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Espacement entre les liens */
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white; /* Couleur des liens */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: #a73f3f; /* Rouge un peu plus sombre au survol */
+    transform: scale(1.05); /* Effet de zoom léger */
+}
+
+/* Formulaire de recherche */
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0; /* Espacement au-dessus et en dessous */
+}
+
+form input[type="search"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 300px;
+}
+
+form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Bouton rechercher */
+form button[type="submit"] {
+    background-color: #d3d3d3; /* Gris clair */
+    color: black;
+}
+
+form button[type="submit"]:hover {
+    background-color: #c0c0c0; /* Gris plus foncé */
+    transform: scale(1.05);
+}
+
+/* Bouton ajouter */
+form button a {
+    text-decoration: none;
+    color: black;
+}
+
+form button a:hover {
+    text-decoration: underline;
+}
+
+form button:nth-child(2) {
+    background-color: #d3d3d3; /* Gris clair */
+}
+
+form button:nth-child(2):hover {
+    background-color: #c0c0c0; /* Gris plus foncé */
+}
+
+/* Table */
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px auto; /* Ajoute un espacement avec le contenu autour */
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+th {
+    background-color: #cc6666; /* Rouge délavé */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ffeeee; /* Survol */
+    cursor: pointer;
+}
+
+/* Liens dans le tableau */
+table a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #cc6666; /* Rouge délavé */
+}
+
+table a:hover {
+    text-decoration: underline;
+    color: #b24d4d; /* Rouge plus foncé */
+}
+
+/* Boutons modifier et supprimer */
+table a:nth-child(1) {
+    color: #4caf50; /* Vert */
+}
+
+table a:nth-child(1):hover {
+    color: #388e3c;
+}
+
+table a:nth-child(2) {
+    color: #f44336; /* Rouge */
+}
+
+table a:nth-child(2):hover {
+    color: #d32f2f;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    form input[type="search"] {
+        width: 200px;
+    }
+}

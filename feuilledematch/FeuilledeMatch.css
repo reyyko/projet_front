@@ -1,0 +1,164 @@
+/* Fond général */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5dc; /* Fond beige */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Titre principal */
+h1 {
+    text-align: center;
+    color: #000; /* Titres en noir */
+    margin: 20px 0;
+    font-size: 2rem; /* Taille réduite */
+    font-weight: bold;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #c45c5c; /* Rouge délavé (comme des tuiles) */
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: center; /* Centre les liens */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Espacement entre les liens */
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white; /* Couleur des liens */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: #a73f3f; /* Rouge un peu plus sombre au survol */
+    transform: scale(1.05); /* Effet de zoom léger */
+}
+
+/* Table */
+table {
+    border-collapse: collapse;
+    width: 90%; /* Réduction de la largeur */
+    background-color: #fff; /* Blanc pour contraste */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    margin: 20px auto; /* Centrer et espacer */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Bordures gris clair */
+    padding: 8px; /* Réduction du padding */
+    text-align: center;
+    font-size: 0.85rem; /* Taille réduite */
+    color: #555;
+}
+
+th {
+    background-color: #c45c5c; /* Rouge délavé */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: #fefefe; /* Fond clair pour les cellules */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternance des couleurs pour les lignes */
+}
+
+tr:hover {
+    background-color: #ffe5e5; /* Rouge très clair au survol */
+    cursor: pointer;
+}
+
+/* Boutons */
+/* Actions : Centrer les boutons */
+.actions {
+    display: flex;
+    justify-content: center; /* Centre les boutons horizontalement */
+    gap: 15px; /* Espacement entre les boutons */
+    margin-top: 20px;
+}
+
+/* Bouton "Retour" : Dégradé rouge */
+.actions .back {
+    background: linear-gradient(45deg, #c45c5c, #a73f3f); /* Dégradé rouge */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.actions .back:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #a73f3f, #8b0000); /* Dégradé rouge plus sombre */
+}
+
+/* Bouton "Attribuer Note" : Vert délavé */
+.actions .note {
+    background-color: #6fbf73; /* Vert délavé */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.actions .note:hover {
+    transform: scale(1.05);
+    background-color: #5da564; /* Vert plus foncé au survol */
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+}

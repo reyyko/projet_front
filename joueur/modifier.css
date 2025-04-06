@@ -1,0 +1,189 @@
+/* Général */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: darkgray;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #280a0a;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Titre */
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+}
+
+/* Formulaire */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+}
+
+/* Statut */
+.full-width {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.full-width label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.full-width .radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.full-width .radio-group label {
+    font-weight: normal;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* Boutons */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form-actions input {
+    flex: 0.5; /* Réduit la taille du bouton Modifier */
+    padding: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.form-actions input[type="reset"] {
+    background-color: #f44336;
+}
+
+.form-actions input[type="reset"]:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}
+
+.form-actions input[type="submit"] {
+    background-color: #4caf50;
+}
+
+.form-actions input[type="submit"]:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.form-actions a {
+    flex: 0.5; /* Taille réduite pour Annuler */
+    text-decoration: none;
+    text-align: center;
+    background-color: #f44336; /* Couleur rouge */
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.form-actions a:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}
+
+/* Lien retour */
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #6a11cb;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #2575fc;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un match</title>
+    <link rel="stylesheet" href="match.css">
+</head>
+<body>
+    <h1>Ajouter un match</h1>
+    <form id="formAjout">
+        <label for="dateMatch">Date :</label><br>
+        <input type="date" name="dateMatch" id="dateMatch" required><br>
+
+        <label for="time">Heure :</label><br>
+        <input type="time" name="time" id="time" required placeholder="ex: 11:00"><br>
+
+        <label for="placeMeeting">Lieu de rencontre :</label><br>
+        <input type="text" name="placeMeeting" id="placeMeeting" required placeholder="ex: terrain de handball"><br>
+
+        <label for="opponent">Équipe adverse :</label><br>
+        <input type="text" name="opponent" id="opponent" required placeholder="ex: Les Tigres"><br>
+
+        <button type="button" onclick="window.location.href='match.php'">Annuler</button>
+        <button type="submit">Valider</button>
+    </form>
+
+    <script>
+        const token = localStorage.getItem('token');
+
+        document.getElementById("formAjout").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const matchData = {
+                dateMatch: document.getElementById("dateMatch").value,
+                time: document.getElementById("time").value,
+                placeMeeting: document.getElementById("placeMeeting").value,
+                opponent: document.getElementById("opponent").value
+            };
+
+            fetch("http://localhost/projetManolo/api/match/ajouterMatch.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer " + token
+                },
+                body: JSON.stringify(matchData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                if (data.message.includes("ajouté")) {
+                    window.location.href = "match.php";
+                }
+            })
+            .catch(error => {
+                console.error("Erreur d'ajout :", error);
+                alert("Une erreur est survenue lors de l'ajout.");
+            });
+        });
+    </script>
+</body>
+</html>
